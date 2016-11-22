@@ -1,0 +1,33 @@
+<%= form_for(@message) do |f| %>
+  <% if @message.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@message.errors.count, "error") %> prohibited this message from being saved:</h2>
+
+      <ul>
+      <% @message.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :type %><br>
+    <%= f.number_field :type %>
+  </div>
+  <div class="field">
+    <%= f.label :repeatIndicator %><br>
+    <%= f.number_field :repeatIndicator %>
+  </div>
+  <div class="field">
+    <%= f.label :mmsi %><br>
+    <%= f.number_field :mmsi %>
+  </div>
+  <div class="field">
+    <%= f.label :receivedDate %><br>
+    <%= f.datetime_select :receivedDate %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

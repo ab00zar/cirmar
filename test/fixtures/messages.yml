@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 1
+  repeatIndicator: 1
+  mmsi: 1
+  receivedDate: 2016-11-22 10:21:03
+
+two:
+  type: 1
+  repeatIndicator: 1
+  mmsi: 1
+  receivedDate: 2016-11-22 10:21:03
