@@ -6,6 +6,12 @@
 
             <h1>Messages</h1>
 
+            <p>
+              Download:
+              <%= link_to "CSV", messages_path(format: "csv") %> <!-- |
+              <%= link_to "Excel", messages_path(format: "xls") %> -->
+            </p>
+
             <table class="table table-hover">
               <thead>
                 <tr>
@@ -31,9 +37,9 @@
                 <% end %>
               </tbody>
             </table>
-            <div align="right">
+<!--             <div align="right">
             <%= button_to "Save", csv_messages_path, :class => "btn btn-success", type: "submit" %>
-            </div>
+            </div> -->
             <br>
 
 <!--             <%= link_to 'New Message', new_message_path %>

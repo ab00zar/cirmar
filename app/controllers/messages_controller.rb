@@ -1,23 +1,27 @@
 class MessagesController < ApplicationController
   before_action :set_message, only: [:show, :edit, :update, :destroy]
-require 'csv'
-  def csv
 
-file = "#{Rails.root}/public/data.csv"
- 
-data = Message.all
- 
-CSV.open( file, 'w' ) do |writer|
-  data.each do |s|
-    writer << [s.type, s.repeatIndicator, s.mmsi]
-  end
-end
-  end
+  # def csv
+
+  #     file = "#{Rails.root}/public/data.csv"
+
+  #     data = Message.all
+
+  #     CSV.open( file, 'w' ) do |writer|
+  #           data.each do |s|
+  #                  writer << [s.type, s.repeatIndicator, s.mmsi]
+  #           end
+  #     end
+  # end
 
   # GET /messages
   # GET /messages.json
   def index
     @messages = Message.all
+    respond_to do |format|
+            format.html
+            format.csv { send_data @messages.to_csv }
+    end
   end
 
   # GET /messages/1
