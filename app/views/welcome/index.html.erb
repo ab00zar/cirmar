@@ -17,6 +17,18 @@
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
+                    <% if user_signed_in? %>
+                                <li class="dropdown">
+                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Bienvenu! <span class="caret"></span></a>
+                                  <ul class="dropdown-menu" style="background-color: #E7E7E7;">
+                                    <li><a href="/messages" >Messages</a></li><!-- style="color: #555;" -->
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="/users/sign_out">Log Out</a></li>
+                                  </ul>
+                                </li>
+                    <% end %>  
+                    </li>
+
                     <li>
                         <a class="page-scroll" href="#about">Info</a>
                     </li>
@@ -42,6 +54,50 @@
     <!-- Header -->
     <header>
         <div class="container">
+             <div class="col-sm-2">
+                        <br>
+                        <br>
+                        <br>
+                        <br> 
+                        <br>
+                        <br>
+                        <% if !user_signed_in? %>     
+                                <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                                              <div class="field">
+        <!--                                         <%= f.label :email %><br />
+         -->                                        <div class="input-group">
+                                                                    <span class="input-group-addon success">
+                                                                          <i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i>
+                                                                    </span>
+                                                                    <%= f.email_field :email, autofocus: true, :class => "form-control", 
+                                                                    :style => "direction:ltr; text-align:left;", :placeholder => "Email" %>
+                                                    </div>
+                                              </div>
+
+                                              <div class="field">
+        <!--                                         <%= f.label :password %><br />
+         -->                                         <div class="input-group">
+                                                                    <span class="input-group-addon success">
+                                                                          <i class="fa fa-key fa-lg" aria-hidden="true"></i>
+                                                                    </span>
+                                                                    <%= f.password_field :password, autocomplete: "off", :class => "form-control", 
+                                                                    :style => "direction:ltr; text-align:left;",  :placeholder => "Password"  %>
+                                                        </div>
+                                              </div>
+
+                                              <% if devise_mapping.rememberable? -%>
+                                                <div class="field">
+                                                  <%= f.check_box :remember_me %>
+                                                  <%= f.label :remember_me %>
+                                                </div>
+                                              <% end -%>
+
+                                              <div class="actions">
+                                                <%= f.submit "Log in", :class => "btn btn-info"  %>
+                                              </div>
+                                <% end %>
+                        <% end %>
+            </div>
             <div class="intro-text">
                 <div class="intro-lead-in">Bienvenu!</div>
                 <div class="intro-heading">CIRculation MARitime</div>
