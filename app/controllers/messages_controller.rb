@@ -17,11 +17,42 @@ class MessagesController < ApplicationController
   # GET /messages
   # GET /messages.json
   def index
-    @messages = Message.all
-    respond_to do |format|
-            format.html
-            format.csv { send_data @messages.to_csv }
-    end
+      
+      #case params[:type_de_message]
+       #when "1"
+       # @messages = Message.where(:type => "1")
+      #else
+        
+
+      #end
+
+      
+      #if params[:type_de_message] == "1"
+      #        @messages = Message.where(:type => "1")
+      #end
+
+        if params[:type_de_message] == "all" || params[:type_de_message].blank?
+          @messages = Message.all
+        elsif !params[:type_de_message].blank?
+              @messages = Message.type(params[:type_de_message]) 
+            end
+
+       #if params[:type_de_navire] == "all" || params[:type_de_navire].blank?
+         #    @messages = 
+       if !params[:type_de_navire].blank? && params[:type_de_navire] != "all"
+          @messages = @messages.navire(params[:type_de_navire])
+        end
+      respond_to do |format|
+
+              format.html
+              format.csv { 
+                send_data @messages.to_csv() }
+          
+      end
+
+
+
+
   end
 
   # GET /messages/1
@@ -86,6 +117,6 @@ class MessagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def message_params
-      params.require(:message).permit(:type, :repeatIndicator, :mmsi, :receivedDate)
+      params.require(:message).permit(:type, :repeatIndicator, :mmsi, :receivedDate, :shipType)
     end
 end

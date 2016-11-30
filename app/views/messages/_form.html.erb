@@ -24,8 +24,12 @@
     <%= f.number_field :mmsi %>
   </div>
   <div class="field">
+    <%= f.label :shipType %><br>
+    <%= f.number_field :shipType %>
+  </div>  
+  <div class="field">
     <%= f.label :receivedDate %><br>
-    <%= f.datetime_select :receivedDate %>
+    <%= f.date_select :receivedDate %>
   </div>
   <div class="actions">
     <%= f.submit %>
