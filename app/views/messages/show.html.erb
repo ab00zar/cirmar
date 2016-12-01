@@ -1,24 +1,81 @@
-<p id="notice"><%= notice %></p>
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">CIRMAR Projet</a>
+            </div>
 
-<p>
-  <strong>Type:</strong>
-  <%= @message.type %>
-</p>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <% if user_signed_in? %>
+                                <li class="dropdown">
+                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Bienvenu! <span class="caret"></span></a>
+                                  <ul class="dropdown-menu" style="background-color: #E7E7E7;">
+                                    <li><a href="/messages" >Messages</a></li><!-- style="color: #555;" -->
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="/users/sign_out">Log Out</a></li>
+                                  </ul>
+                                </li>
+                    <% end %>  
+                    </li>
 
-<p>
-  <strong>Repeatindicator:</strong>
-  <%= @message.repeatIndicator %>
-</p>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
 
-<p>
-  <strong>Mmsi:</strong>
-  <%= @message.mmsi %>
-</p>
+<div class="row">
+      	<br/>
+      	<br/>
+      	<br/>
+      	<br/>
+      	<br/>      	      	
+      	<div class="col-sm-1">
+      	</div>
+      	<div class="col-sm-10">
+            		<div class="panel panel-primary">
+                  		<div class="panel-heading">
+                        			<h4 class="panel-title">Le Détail</h4>
+                  		</div>
+                  		<div class="panel-body">
+				<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Receiveddate:</strong>
-  <%= @message.receivedDate %>
-</p>
+				<p>
+				  <strong>Type:</strong>
+				  <%= @message.type %>
+				</p>
 
-<%= link_to 'Edit', edit_message_path(@message) %> |
-<%= link_to 'Back', messages_path %>
+				<p>
+				  <strong>Repeatindicator:</strong>
+				  <%= @message.repeatIndicator %>
+				</p>
+
+				<p>
+				  <strong>Mmsi:</strong>
+				  <%= @message.mmsi %>
+				</p>
+
+				<p>
+				  <strong>Receiveddate:</strong>
+				  <%= @message.receivedDate %>
+				</p>
+				<p align="right">
+				<!-- <%= link_to 'Edit', edit_message_path(@message) %> | -->
+				<%= link_to 'Back', messages_path %>
+				</p>
+			</div>
+		</div>
+	</div>
+      	<div class="col-sm-1">
+      	</div>
+</div>
