@@ -49,4 +49,5 @@ group :development do
 end
 
 gem 'devise'
+gem 'kaminari'
 gem 'rails_12factor', group: :production

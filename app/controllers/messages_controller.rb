@@ -32,7 +32,7 @@ class MessagesController < ApplicationController
       #end
 
         if params[:type_de_message] == "all" || params[:type_de_message].blank?
-          @messages = Message.all
+          @messages = Message.all.page(params[:page])
         elsif !params[:type_de_message].blank?
               @messages = Message.type(params[:type_de_message]) 
             end
