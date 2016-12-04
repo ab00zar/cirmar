@@ -150,7 +150,7 @@
                             <tbody>
                               <% @messages.each do |message| %>
                                 <tr>
-                                  <td><%= message.type %></td>
+                                  <td><%= message.attributes["Message Type"] %></td>
                                   <td><%= message.repeatIndicator %></td>
                                   <td><%= message.mmsi %></td>
                                   <td><%= message.shipType %></td>
