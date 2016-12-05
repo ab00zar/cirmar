@@ -8,7 +8,7 @@ class Message
   field :receivedDate, type: Date
   field :shipType, type: Integer
 
-  scope :type, ->(tpe) { where(self.attributes["Message Type"] => tpe) }
+  scope :type, ->(tpe) { where(Message_Type: tpe) }
   scope :navire, ->(value) { where(shipType: value) }
 
   def self.to_csv()
