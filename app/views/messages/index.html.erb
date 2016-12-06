@@ -156,7 +156,7 @@
                                   <td><%= message.mmsi %></td>
                                   <td><%= message.longitude %></td>
                                   <td><%= message.latitude %></td>
-                                  <td><% if message.ship_type != nil %><%= message.ship_type %><% end %></td>
+                                  <td><% if message.ship_type.exists? %><%= message.ship_type %><% end %></td>
                                   <td><%= link_to 'Show', message %></td>
 <!--                                   <td><%= link_to 'Edit', edit_message_path(message) %></td>
                                   <td><%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
