@@ -140,9 +140,10 @@
                               <tr>
                                 <th>Type</th>
                                 <th>Repeatindicator</th>
-                                <th>Mmsi</th>
-                                <th>Navire</th>
-                                <th>Receiveddate</th>
+                                <th>MMSI</th>
+                                <th>Longitude</th>
+                                <th>Latitude</th>
+                                <th>Ship Type</th>
                                 <th colspan="1"></th>
                               </tr>
                             </thead>
@@ -153,8 +154,9 @@
                                   <td><%= message.message_type %></td>
                                   <td><%= message.repeat_indicator %></td>
                                   <td><%= message.mmsi %></td>
-                                  <td><%= message.shipType %></td>
-                                  <td><%= message.receivedDate %></td>
+                                  <td><%= message.longitude %></td>
+                                  <td><%= message.latitude %></td>
+                                  <td><%= message.ship_type %></td>
                                   <td><%= link_to 'Show', message %></td>
 <!--                                   <td><%= link_to 'Edit', edit_message_path(message) %></td>
                                   <td><%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
