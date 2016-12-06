@@ -143,7 +143,6 @@
                                 <th>MMSI</th>
                                 <th>Longitude</th>
                                 <th>Latitude</th>
-                                <th>Ship Type</th>
                                 <th colspan="1"></th>
                               </tr>
                             </thead>
@@ -156,7 +155,6 @@
                                   <td><%= message.mmsi %></td>
                                   <td><%= message.longitude %></td>
                                   <td><%= message.latitude %></td>
-                                  <td><% if message.has_attribute?(ship_type) %><%= message.ship_type %><% end %></td>
                                   <td><%= link_to 'Show', message %></td>
 <!--                                   <td><%= link_to 'Edit', edit_message_path(message) %></td>
                                   <td><%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
