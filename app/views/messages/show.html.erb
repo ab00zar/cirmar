@@ -49,26 +49,431 @@
                   		</div>
                   		<div class="panel-body">
 				<p id="notice"><%= notice %></p>
+                          <% case @message.message_type
+                                           when "1".."3"
+                            %>
+                          				<p>
+                          				  <strong>Type:</strong>
+                          				  <%= @message.message_type %>
+                          				</p>
 
-				<p>
-				  <strong>Type:</strong>
-				  <%= @message.type %>
-				</p>
+                          				<p>
+                          				  <strong>Repeat Indicator:</strong>
+                          				  <%= @message.repeat_indicator %>
+                          				</p>
 
-				<p>
-				  <strong>Repeatindicator:</strong>
-				  <%= @message.repeatIndicator %>
-				</p>
+                          				<p>
+                          				  <strong>Mmsi:</strong>
+                          				  <%= @message.mmsi %>
+                          				</p>
+                                                    <p>
+                                                      <strong>Navigation Status:</strong>
+                                                      <%= @message.navigation_status %>
+                                                    </p>
 
-				<p>
-				  <strong>Mmsi:</strong>
-				  <%= @message.mmsi %>
-				</p>
+                                                    <p>
+                                                      <strong>Rate of Turn:</strong>
+                                                      <%= @message.rate_of_turn %>
+                                                    </p>
 
-				<p>
-				  <strong>Receiveddate:</strong>
-				  <%= @message.receivedDate %>
-				</p>
+                                                    <p>
+                                                      <strong>Speed Over Ground:</strong>
+                                                      <%= @message.speed_over_ground %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>Position Accuracy:</strong>
+                                                      <%= @message.position_accuracy %>
+                                                    </p>
+                                                    <p>
+                                                      <strong>Longitude:</strong>
+                                                      <%= @message.longitude %>
+                                                    </p>
+                                                    <p>
+                                                      <strong>Latitude:</strong>
+                                                      <%= @message.latitude %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>Course Over Ground:</strong>
+                                                      <%= @message.course_over_ground %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>True Heading:</strong>
+                                                      <%= @message.true_heading %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>Time Stamp:</strong>
+                                                      <%= @message.time_stamp %>
+                                                    </p>
+                                                    <p>
+                                                      <strong>Maneuver Indicator:</strong>
+                                                      <%= @message.maneuver_indicator %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>Spare:</strong>
+                                                      <%= @message.spare %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>RAIM Flag:</strong>
+                                                      <%= @message.raim_flag %>
+                                                    </p>
+                                          <% when "4" %>
+                                                    <p>
+                                                      <strong>Type:</strong>
+                                                      <%= @message.message_type %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>Repeat Indicator:</strong>
+                                                      <%= @message.repeat_indicator %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>Mmsi:</strong>
+                                                      <%= @message.mmsi %>
+                                                    </p>
+                                                    <p>
+                                                      <strong>Longitude:</strong>
+                                                      <%= @message.longitude %>
+                                                    </p>
+                                                    <p>
+                                                      <strong>Latitude:</strong>
+                                                      <%= @message.latitude %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>Spare:</strong>
+                                                      <%= @message.spare %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>RAIM Flag:</strong>
+                                                      <%= @message.raim_flag %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>Month:</strong>
+                                                      <%= @message.month %>
+                                                    </p>
+                                                    <p>
+                                                      <strong>Day:</strong>
+                                                      <%= @message.day %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>Hour:</strong>
+                                                      <%= @message.hour %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>Minute:</strong>
+                                                      <%= @message.minute %>
+                                                    </p>
+                                                    <p>
+                                                      <strong>Second:</strong>
+                                                      <%= @message.second %>
+                                                    </p>
+                                                    <p>
+                                                      <strong>Fix Quality:</strong>
+                                                      <%= @message.fix_quality %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>Type EPFD:</strong>
+                                                      <%= @message.type_epfd %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>SOTDMA State:</strong>
+                                                      <%= @message.sotdma_state %>
+                                                    </p>                                                    
+                                  <%   when "5" %>
+                                                    <p>
+                                                      <strong>Type:</strong>
+                                                      <%= @message.message_type %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>Repeat Indicator:</strong>
+                                                      <%= @message.repeat_indicator %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>Mmsi:</strong>
+                                                      <%= @message.mmsi %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>Receiveddate:</strong>
+                                                      <%= @message.receivedDate %>
+                                                    </p>
+                                                    <p>
+                                                      <strong>Type:</strong>
+                                                      <%= @message.message_type %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>repeat_indicator:</strong>
+                                                      <%= @message.repeat_indicator %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>Mmsi:</strong>
+                                                      <%= @message.mmsi %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>Spare:</strong>
+                                                      <%= @message.spare %>
+                                                    </p>
+                                                    <p>
+                                                      <strong>AIS Version:</strong>
+                                                      <%= @message.ais_version %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>IMO Number:</strong>
+                                                      <%= @message.imo_number %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>Call Sign:</strong>
+                                                      <%= @message.call_sign %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>Vessel Name:</strong>
+                                                      <%= @message.vessel_name %>
+                                                    </p>
+                                                    <p>
+                                                      <strong>Ship Type:</strong>
+                                                      <%= @message.ship_type %>
+                                                    </p>
+                                                      <strong>Dimension Bow:</strong>
+                                                      <%= @message.dimension_bow %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>Dimension Stern:</strong>
+                                                      <%= @message.dimension_stern %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>Dimension Port:</strong>
+                                                      <%= @message.dimension_port %>
+                                                    </p>
+                                                    <p>
+                                                      <strong>Dimension Starboard:</strong>
+                                                      <%= @message.dimension_starboard %>
+                                                    </p>   
+
+                                                    <p>
+                                                      <strong>Position Fix Type:</strong>
+                                                      <%= @message.position_fix_type %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>ETA Month:</strong>
+                                                      <%= @message.eta_month %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>ETA Day:</strong>
+                                                      <%= @message.eta_day %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>ETA Hour:</strong>
+                                                      <%= @message.eta_hour %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>ETA Minute:</strong>
+                                                      <%= @message.eta_minute %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>Draught:</strong>
+                                                      <%= @message.draught %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>Destination:</strong>
+                                                      <%= @message.destination %>
+                                                    </p>
+                                                    <p>
+                                                      <strong>DTE:</strong>
+                                                      <%= @message.dte %>
+                                                    </p>
+                                   <% when "18" %>
+
+                                                    <p>
+                                                      <strong>Message Type:</strong>
+                                                      <%= @message.message_type %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>Repeat Indicator:</strong>
+                                                      <%= @message.repeat_indicator %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>MMSI:</strong>
+                                                      <%= @message.mmsi %>
+                                                    </p>     
+
+                                                    <p>
+                                                      <strong>Speed Over Ground:</strong>
+                                                      <%= @message.speed_over_ground %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>Position Accuracy:</strong>
+                                                      <%= @message.position_accuracy %>
+                                                    </p>
+                                                    <p>
+                                                      <strong>Longitude:</strong>
+                                                      <%= @message.longitude %>
+                                                    </p>
+                                                    <p>
+                                                      <strong>Latitude:</strong>
+                                                      <%= @message.latitude %>
+                                                    </p>
+                                                    <p>
+                                                      <strong>Course Over Ground:</strong>
+                                                      <%= @message.course_over_ground %>
+                                                    </p>     
+
+                                                    <p>
+                                                      <strong>True Heading:</strong>
+                                                      <%= @message.true_heading %>
+                                                    </p>
+                                                    <p>
+                                                      <strong>Time Stamp:</strong>
+                                                      <%= @message.time_stamp %>
+                                                    </p>
+                                                    <p>
+                                                      <strong>RAIM Flag:</strong>
+                                                      <%= @message.raim_flag %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>CS Unit:</strong>
+                                                      <%= @message.cs_unit %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>Display Flag:</strong>
+                                                      <%= @message.display_flag %>
+                                                    </p>  
+                                                    <p>
+                                                      <strong>DSC Flag:</strong>
+                                                      <%= @message.dsc_flag %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>Band Flag:</strong>
+                                                      <%= @message.band_flag %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>Radio Status:</strong>
+                                                      <%= @message.radio_status %>
+                                                    </p>     
+                                      <% when "19" %>
+
+                                                    <p>
+                                                      <strong>Message Type:</strong>
+                                                      <%= @message.message_type %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>Repeat Indicator:</strong>
+                                                      <%= @message.repeat_indicator %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>MMSI:</strong>
+                                                      <%= @message.mmsi %>
+                                                    </p>     
+
+                                                    <p>
+                                                      <strong>Speed Over Ground:</strong>
+                                                      <%= @message.speed_over_ground %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>Position Accuracy:</strong>
+                                                      <%= @message.position_accuracy %>
+                                                    </p>
+                                                    <p>
+                                                      <strong>Longitude:</strong>
+                                                      <%= @message.longitude %>
+                                                    </p>
+                                                    <p>
+                                                      <strong>Latitude:</strong>
+                                                      <%= @message.latitude %>
+                                                    </p>
+                                                    <p>
+                                                      <strong>Course Over Ground:</strong>
+                                                      <%= @message.course_over_ground %>
+                                                    </p>     
+
+                                                    <p>
+                                                      <strong>True Heading:</strong>
+                                                      <%= @message.true_heading %>
+                                                    </p>
+                                                    <p>
+                                                      <strong>Time Stamp:</strong>
+                                                      <%= @message.time_stamp %>
+                                                    </p>
+                                                    <p>
+                                                      <strong>RAIM Flag:</strong>
+                                                      <%= @message.raim_flag %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>Pos Fix Type:</strong>
+                                                      <%= @message.pos_fix_type %>
+                                                    </p>  
+                                                    <p>
+                                                      <strong>DTE:</strong>
+                                                      <%= @message.dte %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>Name:</strong>
+                                                      <%= @message.name %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>Ship Type Cargo:</strong>
+                                                      <%= @message.ship_type_cargo %>
+                                                    </p>   
+                                                    <p>
+                                                      <strong>Dim to Bow:</strong>
+                                                      <%= @message.dim_to_bow %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>Dim to Stern:</strong>
+                                                      <%= @message.dim_to_stern %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>Dim to Port:</strong>
+                                                      <%= @message.dim_to_port %>
+                                                    </p>
+                                                    <p>
+                                                      <strong>Dim to Star Board:</strong>
+                                                      <%= @message.dim_to_star_board %>
+                                                    </p>                                                                                                                       
+                                        <% end %>
 				<p align="right">
 				<!-- <%= link_to 'Edit', edit_message_path(@message) %> | -->
 				<%= link_to 'Back', messages_path %>

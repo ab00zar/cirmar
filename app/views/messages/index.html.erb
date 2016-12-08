@@ -143,6 +143,7 @@
                                 <th>MMSI</th>
                                 <th>Longitude</th>
                                 <th>Latitude</th>
+                                <th>Course Over Ground</th>
                                 <th>Ship Type</th>
                                 <th colspan="1"></th>
                               </tr>
@@ -154,9 +155,22 @@
                                   <td><%= message.message_type %></td>
                                   <td><%= message.repeat_indicator %></td>
                                   <td><%= message.mmsi %></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
+                                  <td><%= if message.has_attribute?("longitude") 
+                                                          message.longitude 
+                                                    end %>
+                                  </td>
+                                  <td><%= if message.has_attribute?("latitude") 
+                                                          message.latitude
+                                                    end %>
+                                  </td>
+                                  <td><%= if message.has_attribute?("course_over_ground") 
+                                                          message.course_over_ground
+                                                    end %>
+                                  </td>
+                                  <td><%= if message.has_attribute?("ship_type") 
+                                                          message.ship_type
+                                                    end %>
+                                  </td>
                                   <td><%= link_to 'Show', message %></td>
 <!--                                   <td><%= link_to 'Edit', edit_message_path(message) %></td>
                                   <td><%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
