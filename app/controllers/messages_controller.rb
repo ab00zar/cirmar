@@ -13,7 +13,23 @@ class MessagesController < ApplicationController
   #           end
   #     end
   # end
+  def ships
+    #@ships =  Message.today
+    #@ships = Message.select("mmsi").distinct #
+   # sshd = [{"$group"=> {"_id" => "$mmsi","nu"=>{$sum=>1}}}]
+#@ships = Message.aggregate(sshd)
+  myships = Message.all.distinct("mmsi")
+  @ships = Kaminari.paginate_array(myships).page(params[:page])
+  end
 
+  def ships_show
+    #@ships = Message.aggregate([{"$group"=> {_id => "$mmsi",nu=>{$sum=>1}}}]).page(params[:page])
+    #@ships = Message.ship #select("mmsi").distinct
+    
+    #@messages = Message.where("#{:mmsi}" => 100010001).count
+    #@messages = Message.distinct(:mmsi).count
+    @messages = Message.where(mmsi: params[:id])
+  end
   # GET /messages
   # GET /messages.json
   def index

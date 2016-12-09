@@ -1,0 +1,70 @@
+<div class="row">
+	      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+	<div class="col-sm-2">
+	</div>
+	<div class="col-sm-8">
+	    <div class="panel panel-primary">
+	          <div class="panel-heading">
+	                <h4 class="panel-title">Messages received by ship id <%= params[:id] %></h4>
+	          </div>
+	          <div class="panel-body">
+	                  <p id="notice"><%= notice %></p>
+
+	                  <table class="table table-hover">
+	                            <thead>
+	                              <tr>
+	                                <th>Type</th>
+	                                <th>Repeatindicator</th>
+	                                <th>MMSI</th>
+	                                <th>Longitude</th>
+	                                <th>Latitude</th>
+	                                <th>Course Over Ground</th>
+	                                <th>Ship Type</th>
+	                                <th colspan="1"></th>
+	                              </tr>
+	                            </thead>
+
+                            <tbody>                            <tbody>
+                              <% @messages.each do |message| %>
+                                <tr>
+                                  <td><%= message.message_type %></td>
+                                  <td><%= message.repeat_indicator %></td>
+                                  <td><%= message.mmsi %></td>
+                                  <td><%= if message.has_attribute?("longitude") 
+                                                          message.longitude 
+                                                    end %>
+                                  </td>
+                                  <td><%= if message.has_attribute?("latitude") 
+                                                          message.latitude
+                                                    end %>
+                                  </td>
+                                  <td><%= if message.has_attribute?("course_over_ground") 
+                                                          message.course_over_ground
+                                                    end %>
+                                  </td>
+                                  <td><%= if message.has_attribute?("ship_type") 
+                                                          message.ship_type
+                                                    end %>
+                                  </td>
+                                  <td><%= link_to 'Show', message %></td>
+<!--                                   <td><%= link_to 'Edit', edit_message_path(message) %></td>
+                                  <td><%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+                                </tr>
+                              <% end %>
+                            </tbody>                          </table>
+                          </table>
+                          <p align="right">
+                          	<%= link_to 'Back', ships_path %>
+                          </p>
+	          </div>
+	      </div>         
+	<div class="col-sm-2">
+	</div>
+</div>
+
+
+
