@@ -5,7 +5,7 @@ class Message
   field :type, type: Integer
   field :repeatIndicator, type: Integer
   field :mmsi, type: String
-  field :receivedDate, type: Date
+  field :receivedDate, type: DateTime
   field :shipType, type: Integer
 
   scope :type, ->(tpe) { where(message_type: tpe) }

@@ -1,12 +1,35 @@
 <div class="row">
-	      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
 	<div class="col-sm-2">
 	</div>
 	<div class="col-sm-8">
+		<div class="row">
+			<form action="/ships/<%= "#{params[:destination]}" %>" method="post">
+			      	<div class="row">
+			            		<div class="form-group">
+
+			                  		<div class="row" align="center">
+			          		            	            <div class="form-group col-sm-3">
+							             <div class="input-group">
+							                        <span class="input-group-addon danger mainsearch"><i class="fa fa-map-marker fa-2x fa-fw"></i></span>
+							                        <input type="text" id="destination" name="destination" class="form-control" placeholder="مقصد" tabindex="1">
+							             </div>
+
+			            				</div>
+			       				<button type="submit" class="btn btn-danger" aria-label="Left Align" tabindex="2">
+		                                                      		<i class="fa fa-search" aria-hidden="true"></i> Search!
+			                                    		</button>
+
+			                  		</div>      
+		            			</div>
+
+			      	</div>
+			</form>
+		</div>		
 	    <div class="panel panel-primary">
 	          <div class="panel-heading">
 	                <h4 class="panel-title">Ships</h4>
