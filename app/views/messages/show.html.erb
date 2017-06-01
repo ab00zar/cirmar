@@ -49,6 +49,80 @@
                   		</div>
                   		<div class="panel-body">
 				<p id="notice"><%= notice %></p>
+
+                                          <p>
+                                    <strong>Type:</strong>
+                                    <%= @message.message_type %>
+                                  </p>
+
+                                  <p>
+                                    <strong>Repeat Indicator:</strong>
+                                    <%= @message.repeat_indicator %>
+                                  </p>
+
+                                  <p>
+                                    <strong>Mmsi:</strong>
+                                    <%= @message.mmsi %>
+                                  </p>
+                                                    <p>
+                                                      <strong>Navigation Status:</strong>
+                                                      <%= @message.navigation_status %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>Rate of Turn:</strong>
+                                                      <%= @message.rate_of_turn %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>Speed Over Ground:</strong>
+                                                      <%= @message.speed_over_ground %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>Position Accuracy:</strong>
+                                                      <%= @message.position_accuracy %>
+                                                    </p>
+                                                    <p>
+                                                      <strong>Longitude:</strong>
+                                                      <%= @message.longitude %>
+                                                    </p>
+                                                    <p>
+                                                      <strong>Latitude:</strong>
+                                                      <%= @message.latitude %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>Course Over Ground:</strong>
+                                                      <%= @message.course_over_ground %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>True Heading:</strong>
+                                                      <%= @message.true_heading %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>Time Stamp:</strong>
+                                                      <%= @message.date %>
+                                                    </p>
+                                                    <p>
+                                                      <strong>Maneuver Indicator:</strong>
+                                                      <%= @message.maneuver_indicator %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>Spare:</strong>
+                                                      <%= @message.spare %>
+                                                    </p>
+
+                                                    <p>
+                                                      <strong>RAIM Flag:</strong>
+                                                      <%= @message.raim %>
+                                                    </p>
+
+
+
                           <% case @message.message_type
                                            when "1".."3"
                             %>

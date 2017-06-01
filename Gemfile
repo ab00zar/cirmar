@@ -2,18 +2,19 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-#gem 'rails', '4.2.4'
-gem 'rails', '~> 4.2', '>= 4.2.6'
+gem 'rails', '5.0.1'
+#gem 'rails', '~> 4.2', '>= 4.2.8'
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'
-gem 'mongoid', '~> 5.1.0'
+#gem 'mongoid', '~> 5.1.0'
+gem 'mongoid', '~> 6.1.0'
 gem 'bson_ext'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.1.0'
+gem 'coffee-rails', '~> 4.2.1'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -46,6 +47,9 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'capistrano', '~> 3.8', '>= 3.8.1'
+  gem 'capistrano-rails', '~> 1.2', '>= 1.2.3'
+  gem 'capistrano-rvm', '~> 0.1.2'
 end
 
 gem 'devise'

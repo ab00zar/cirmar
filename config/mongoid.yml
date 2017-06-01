@@ -5,11 +5,11 @@ development:
     default:
       # Defines the name of the default database that Mongoid can connect to.
       # (required).
-      database: cirmar_development
+      database: ais
       # Provides the hosts the default client can connect to. Must be an array
       # of host:port pairs. (required)
       hosts:
-        - localhost:27017
+        - 172.17.26.9:27017/
       options:
         # Change the default write concern. (default = { w: 1 })
         # write:
@@ -153,8 +153,8 @@ production:
      # replica set connection setup.
      # Use environment variables or a config file to keep your
      # credentials safe e.g. <%= ENV['MONGODB_URI'] %>.
-     #uri: mongodb://heroku_b73srn13:4q3niofgq5padpqs4moogt9jm8@ds161497.mlab.com:61497/heroku_b73srn13
-     uri: mongodb://172.17.26.9:27017/ais
+     uri: mongodb://heroku_b73srn13:4q3niofgq5padpqs4moogt9jm8@ds161497.mlab.com:61497/heroku_b73srn13
+     #uri: mongodb://172.17.26.9:27017/ais
      options:
        # The default timeout is 5, which is the time in seconds
        # for a connection to time out.

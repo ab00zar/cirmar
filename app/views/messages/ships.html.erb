@@ -52,7 +52,7 @@
                               <% @ships.each do |ship| %>
                                 <tr>
                                   <td><%= ship %></td>
-                                  <td><%= Message.where(mmsi: ship).count %></td>
+                                  <td><%= Message.where(mmsi: ship).count() %></td>
                                   <td></td>
                                   <td></td>
                                   <td><%= link_to 'Show', :action => "ships_show", :id => ship %></td>
