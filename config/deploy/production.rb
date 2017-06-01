@@ -59,3 +59,5 @@
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
 #   }
+
+server '172.17.26.9', user: 'pilmngr', roles: %w{app db web}
